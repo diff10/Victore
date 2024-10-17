@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    width: 35px;
+    position: relative;
+    z-index: 1000;
+}
+
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease; /* Corrigi aqui */
+}
+
+.menu-active .line1 {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-active .line2 {
+    opacity: 0;
+}
+
+.menu-active .line3 {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.navbar-active {
+    display: flex !important; /* Isso garante que a navegação seja exibida */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde o menu no início em telas menores */
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        width: 100px;
+        text-align: right;
+        border-bottom-left-radius: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .navbar-active {
+        display: flex; /* Exibe o menu quando a classe navbar-active for adicionada */
+    }
+}
+
+@media (min-width: 768px){
+    .menu-toggle{
+        display: none;
+    }
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Limita a largura máxima da seção */
+    background-color: #333; /* Fundo branco para contraste */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    color: white;
+}
+
+/* Estilização dos títulos das seções */
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0a500; /* Cor azul para destaque */
+}
+
+/* Estilização dos parágrafos */
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify; /* Justifica o texto para melhor legibilidade */
+}
+
+/* Estilização da seção de serviços */
+#services p {
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+#services p:before {
+    content: ""; /* Adiciona um marcador em formato de círculo antes do texto */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #f0a500; /* Cor azul para o marcador */
+    border-radius: 50%; /* Faz o marcador ser redondo */
+    margin-right: 10px;
+}
+
+#services ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+#services li{
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+#services li:before{
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #f0a500;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+#home {
+    margin-top: 145px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.cta-button.secondary {
+    background-color: #28a745;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+.card{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cards{
+    height: 200px;
+    flex: 1 0 200px;
+    background-color: #f0a500;
+}
+
+#range-slider {
+    margin-bottom: 20px;
+}
