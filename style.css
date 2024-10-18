@@ -172,7 +172,7 @@ section p {
 
 #home {
     margin-top: 145px;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
