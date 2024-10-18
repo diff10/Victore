@@ -9,7 +9,7 @@
 
 .navbar {
     background-color: #333;
-    color: white;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,6 +211,7 @@ section p {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    transition: width 0.3s ease;
 }
 
 .cards{
@@ -221,4 +222,74 @@ section p {
 
 #range-slider {
     margin-bottom: 20px;
+}
+
+:root {
+    --bg-color: white;
+    --text-color: #333;
+    --accent-color: #f0a500;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
+}
+
+/* Dark mode */
+body.dark-mode {
+    --bg-color: #333;
+    --text-color: white;
+    --accent-color: #f0a500;
+}
+
+.dark-mode section {
+    background-color: white;
+    color: #333;
+}
+
+.dark-mode section p {
+    color: #333;
+}
+
+.dark-mode .navbar{
+    background-color: white;
+    color: #333;
+}
+
+.dark-mode .nav-links a{
+    color: #333;
+}
+
+.dark-mode .nav-links{
+    background-color: white;
+}
+
+.dark-mode .menu-toggle hr{
+    background-color: #333;
+}
+
+#theme-toggle{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#theme-toggle:hover{
+    opacity: 0.9;
+}
+
+
+@media (max-width: 802px) {
+    section#responsive-card {
+        display: none !important; /* Garante que a regra seja aplicada */
+    }
 }
